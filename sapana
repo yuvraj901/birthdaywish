@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Happy Birthday Sapana 💖</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ffe3e3, #fff0f6, #ffe6f0, #fff9fb);
+    color: #5a1144;
+    padding: 30px 20px 60px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.5rem, 6vw, 3.6rem);
+    color: #c72e77;
+    margin-bottom: 20px;
+  }
+
+  .message {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    margin-bottom: 35px;
+  }
+
+  .highlight {
+    color: #c72e77;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  button {
+    background: #ff416c;
+    border: none;
+    padding: 16px 40px;
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    border-radius: 35px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 18px #ff6e8a;
+    transition: background-color 0.3s ease;
+    max-width: 90vw;
+  }
+
+  button:hover:not(:disabled) {
+    background-color: #d03060;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .hidden-note {
+    margin-top: 30px;
+    max-width: 95vw;
+    background: rgba(255, 240, 246, 0.9);
+    border-radius: 20px;
+    padding: 28px 32px;
+    color: #7b516f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    box-shadow: 0 0 15px #dca0b9;
+    min-height: 130px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    user-select: text;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+  }
+
+  .hidden-note.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  footer {
+    margin-top: 50px;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    color: #7b516f;
+    font-style: italic;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Happy Birthday Sapana 🎉</h1>
+
+  <div class="message">
+    <p>Today, the world feels a little softer, a little brighter — because it's your day, <span class="highlight">Sapana</span>. ❤️</p>
+    <p>You are the melody to the silence in my thoughts, the rhythm my heart always meant to follow.</p>
+    <p>I hope your birthday is filled with soft moments, true smiles, and silent wishes that bloom into magic. 🌸</p>
+    <p class="highlight">You deserve all the love in the universe.</p>
+  </div>
+
+  <button id="surpriseBtn">Click for a Surprise 🎁</button>
+
+  <div class="hidden-note" id="hiddenNote"></div>
+
+  <footer>— From Yubraj 🌙</footer>
+
+  <script>
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    const hiddenNote = document.getElementById('hiddenNote');
+
+    const surpriseText = `Sapana, I’ve planned a little birthday surprise just for you 💌
+Would you mind sharing your address (including any delivery details like building name, floor, or contact number) so I can send it you In Paris 💗? 
+I really really really want this surprise to reach you perfectly.`;
+
+    surpriseBtn.addEventListener('click', () => {
+      surpriseBtn.disabled = true;
+      hiddenNote.textContent = surpriseText;
+      hiddenNote.classList.add('show');
+      hiddenNote.style.display = 'block';
+      hiddenNote.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+
+</body>
+</html>
